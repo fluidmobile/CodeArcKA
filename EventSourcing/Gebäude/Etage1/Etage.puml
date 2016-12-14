@@ -1,0 +1,8 @@
+@startuml
+(*) --> Ungeprüft
+--> [event.PrüfauftragErteilt] WartenAufPrüfer
+--> [input.StartePrüfung] EtagePrüfungLäuft
+EtagePrüfungLäuft --> [input.StartePrüfung] "<color red>**ERROR**\nPrüfungBereitsInArbeit"
+EtagePrüfungLäuft --> [event.MelderGeprüft] EtagePrüfungLäuft
+EtagePrüfungLäuft --> [input.PrüfungErledit] EtageErledigt
+@enduml

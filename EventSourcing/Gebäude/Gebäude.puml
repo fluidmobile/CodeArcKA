@@ -1,0 +1,9 @@
+@startuml
+(*) --> GebäudeVerwaltet
+--> [input.Auftrag] PrüfauftragErteilt
+--> [event.EtagePrüfungLäuft] PrüfauftragInArbeit
+--> [event.EtageErledigt] PrüfauftragInArbeit
+--> [event.AlleEtagenErledigt] PrüfauftragErledigt
+--> RechnungDrucken
+--> (*)
+@enduml

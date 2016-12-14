@@ -1,0 +1,6 @@
+@startuml
+(*) --> InBetrieb
+--> [event.EtagePrüfungLäuft] "ZuPrüfen"
+--> [input.Messwert] "MelderGeprüft"
+--> [event.EtageErledigt] "InBetrieb"
+@enduml
