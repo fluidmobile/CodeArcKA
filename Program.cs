@@ -14,7 +14,7 @@ namespace EventSourcedActor
         static void Main(string[] args)
         {
             //var path = Path.GetDirectoryName(typeof(Activity).Assembly.Location) ?? ".";
-            var path = @"..\..\..\..\Gebäude";
+            var path = @"./Gebäude";
             var files = Directory.EnumerateFiles(path, "*.puml", SearchOption.AllDirectories);
             foreach (var file in files)
             {
@@ -24,7 +24,7 @@ namespace EventSourcedActor
             }
             Console.WriteLine();
 
-            path = @"..\..\..\..\Events";
+            path = @"./Events";
             Events.LoadFromDirectory(path);
 
             foreach (var ev in Events.Events)
